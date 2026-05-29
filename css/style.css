@@ -1,0 +1,921 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+/* ================= GLOBAL RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================= BODY ================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f7f2ff;
+    color: #111827;
+    
+}
+
+
+/* ================= LINKS ================= */
+
+a{
+    text-decoration: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 6% 20px 3%;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo{
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: -15px;
+}
+
+
+.logo-img{
+
+    display: block;
+
+    width: auto;
+
+    height: 72px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    transition:
+    transform 0.3s ease;
+}
+
+
+.logo-img:hover{
+
+    transform: scale(1.03);
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    list-style: none;
+}
+
+
+.nav-links a{
+    position: relative;
+
+    color: #111827;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover{
+    color: #7c3aed;
+}
+
+
+/* ACTIVE LINK */
+
+.active{
+    color: #7c3aed !important;
+}
+
+
+/* ================= ACTIVE SLIDER ================= */
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 3px;
+
+    background: #7c3aed;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+
+/* Active */
+
+.nav-links a.active::after{
+    width: 100%;
+}
+
+
+/* ================= RIGHT NAV ================= */
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ================= THEME BUTTON ================= */
+
+.theme-toggle{
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 1.35rem;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f3e8ff,
+        #ede9fe
+    );
+
+    color: #7c3aed;
+
+    box-shadow:
+    0 4px 14px rgba(124,58,237,0.12);
+
+    transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.4s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* DARK MODE */
+
+body.dark .theme-toggle{
+
+    background:
+    linear-gradient(
+        135deg,
+        #1e293b,
+        #111827
+    );
+
+    color: #facc15;
+
+    box-shadow:
+    0 4px 18px rgba(168,85,247,0.18);
+}
+
+
+/* HOVER EFFECT */
+
+.theme-toggle:hover{
+
+    transform:
+    rotate(12deg)
+    scale(1.08);
+
+    box-shadow:
+    0 0 16px rgba(192,132,252,0.35),
+    0 0 40px rgba(168,85,247,0.22);
+}
+
+
+/* CLICK EFFECT */
+
+.theme-toggle:active{
+
+    transform:
+    scale(0.92)
+    rotate(-10deg);
+}
+
+
+/* ICON ANIMATION */
+
+.theme-toggle i,
+.theme-toggle span{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.35rem;
+
+    transition:
+    transform 0.45s ease;
+}
+
+
+.theme-toggle:hover i,
+.theme-toggle:hover span{
+
+    transform:
+    rotate(180deg);
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.login-btn{
+    padding: 12px 28px;
+
+    border: 2px solid #7c3aed;
+
+    border-radius: 12px;
+
+    color: #7c3aed;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.login-btn:hover{
+    background: #7c3aed;
+    color: white;
+}
+
+
+/* ================= PREMIUM BUTTONS ================= */
+
+.primary-btn,
+.secondary-btn{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: linear-gradient(to right, #7c3aed, #a855f7);
+
+    color: white;
+
+    padding: 16px 34px;
+
+    border-radius: 16px;
+
+    font-weight: 600;
+
+    border: 2px solid transparent;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+}
+
+
+/* ================= ARROW ================= */
+
+.primary-btn::after,
+.secondary-btn::after{
+
+    content: "→";
+
+    font-size: 1.1rem;
+
+    transition: 0.3s;
+}
+
+
+/* ================= HOVER ================= */
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+    0 0 20px rgba(168,85,247,0.45),
+    0 0 40px rgba(168,85,247,0.25);
+
+    border-color: rgba(255,255,255,0.2);
+}
+
+
+/* ================= ARROW MOVE ================= */
+
+.primary-btn:hover::after,
+.secondary-btn:hover::after{
+
+    transform: translateX(5px);
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark{
+    background: #0f172a;
+    color: white;
+}
+
+
+/* Navbar */
+
+body.dark .navbar{
+    background: #111827;
+}
+
+
+/* Nav links */
+
+body.dark .nav-links a{
+    color: white;
+}
+
+
+/* Logo */
+
+body.dark .logo h2{
+    color: #a855f7;
+}
+
+
+/* Hero */
+
+body.dark .hero{
+    background: linear-gradient(to right, #111827, #1e293b);
+}
+
+
+/* Hero Text */
+
+body.dark .hero-left h1{
+    color: white;
+}
+
+
+body.dark .hero-left p{
+    color: #d1d5db;
+}
+
+
+/* Mission Section */
+
+body.dark .mission-section{
+    background: #111827;
+}
+
+
+/* Mission Cards */
+
+body.dark .mission-card{
+    background: #1e293b;
+}
+
+
+/* Mission Card Text */
+
+body.dark .mission-card h3{
+    color: white;
+}
+
+
+body.dark .mission-card p{
+    color: #d1d5db;
+}
+
+
+/* Section title */
+
+body.dark .section-title h2{
+    color: white;
+}
+
+
+body.dark .section-title p{
+    color: #d1d5db;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+
+    background: #7c3aed;
+
+    border-radius: 5px;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu{
+
+    position: fixed;
+
+    top: 77px;
+
+    right: 0;
+
+    width: 280px;
+
+    height: calc(100vh - 77px);
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px 30px;
+
+    gap: 22px;
+
+    overflow-y: auto;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateX(100%);
+
+    transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+
+    z-index: 999;
+
+    box-shadow:
+    -10px 0 30px rgba(0,0,0,0.08);
+}
+
+.mobile-menu.active{
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateX(0);
+}
+
+
+/* MOBILE LINKS */
+
+.mobile-menu a{
+
+    color: #111827;
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+/* HOVER */
+
+.mobile-menu a:hover{
+
+    color: #7c3aed;
+
+    transform: translateX(4px);
+}
+
+
+/* ACTIVE MENU */
+
+.mobile-menu.active{
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateX(0);
+}
+
+@media(min-width:1025px){
+
+    .mobile-menu{
+
+        display: none !important;
+    }
+}
+
+
+/* ================= DARK MODE ================= */
+
+body.dark .mobile-menu{
+
+    background: #111827;
+
+    border-left:
+    1px solid rgba(255,255,255,0.06);
+}
+
+
+body.dark .mobile-menu a{
+    color: white;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1024px){
+
+    .nav-links{
+        display: none;
+    }
+
+    .login-btn{
+        display: none;
+    }
+
+    #userWelcome{
+        display: none;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+}
+
+section{
+
+    scroll-margin-top: 100px;
+
+    transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+section:target{
+
+    animation:
+    sectionFocus 0.45s ease;
+}
+
+.nav-links a{
+
+    position: relative;
+
+    transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.nav-links a:hover{
+
+    transform: translateY(-2px);
+}
+
+@keyframes sectionFocus{
+
+    0%{
+
+        opacity: 0.75;
+
+        transform: translateY(18px);
+    }
+
+    100%{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* ================= LOGO RESPONSIVE ================= */
+
+@media(max-width:1024px){
+
+    .logo-img{
+
+        height: 64px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .logo-img{
+
+        height: 56px;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .logo-img{
+
+        height: 48px;
+    }
+}
+
+/* ================= LOGO ================= */
+
+.logo-wrapper{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+.logo-img{
+
+    height: 72px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* TEXT */
+
+.logo-text{
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.9;
+}
+
+.logo-she{
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+    color: #24135f;
+}
+
+.logo-can{
+
+    font-size: 1.8rem;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    color: #a855f7;
+
+    margin-top: -2px;
+}
+
+.logo-foundation{
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #4b5563;
+
+    text-transform: lowercase;
+}
+
+
+/* DARK MODE */
+
+body.dark .logo-she{
+
+    color: white;
+}
+
+body.dark .logo-foundation{
+
+    color: #cbd5e1;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .logo-img{
+
+        height: 58px;
+    }
+
+    .logo-she{
+
+        font-size: 1.8rem;
+    }
+
+    .logo-can{
+
+        font-size: 1.4rem;
+    }
+
+    .logo-foundation{
+
+        font-size: 0.7rem;
+    }
+
+    /* HIDE DESKTOP USERNAME ON MOBILE */
+
+    #userWelcome{
+
+        display: none;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .logo-img{
+
+        height: 50px;
+    }
+
+    .logo-she{
+
+        font-size: 1.5rem;
+    }
+
+    .logo-can{
+
+        font-size: 1.2rem;
+    }
+
+    .logo-foundation{
+
+        font-size: 0.65rem;
+    }
+}
+
+
+/* ================= DESKTOP USER NAME ================= */
+
+#userWelcome{
+
+    font-weight: 600;
+
+    color: #7c3aed;
+
+    margin-right: 12px;
+
+    white-space: nowrap;
+}
+
+body.dark #userWelcome{
+
+    color: #c084fc;
+}
+
+
+/* ================= MOBILE USER NAME ================= */
+
+#mobileUserWelcome{
+
+    display: none;
+
+    padding: 14px 20px;
+
+    font-weight: 600;
+
+    color: #7c3aed;
+
+    border-bottom: 1px solid
+    rgba(124,58,237,0.15);
+}
+
+body.dark #mobileUserWelcome{
+
+    color: #c084fc;
+
+    border-bottom: 1px solid
+    rgba(255,255,255,0.08);
+}
+
+.reset-container{
+
+    max-width: 400px;
+
+    margin: 120px auto;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.reset-container input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+}
+
+.reset-container button{
+
+    margin-top: 15px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #7c3aed;
+
+    color: white;
+}
