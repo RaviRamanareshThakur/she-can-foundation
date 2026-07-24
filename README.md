@@ -1,6 +1,10 @@
 # she-can-foundation
 She Can Foundation is a responsive NGO website built with HTML, CSS, JavaScript, and Supabase. It features user authentication, contact form integration, dark mode, and a modern UI designed to empower and support women through community initiatives.
 
+## 🌐 Live Website
+
+https://shecancommunity.netlify.app
+
 # She Can Foundation Website
 
 ## Overview
@@ -124,11 +128,14 @@ Fields:
 * Blog and News Section
 * Donation Integration
 
-## Author
+# Author
 
-Ravi
+**Ravi Thakur**
 
 B.Sc. Information Technology Student
+
+**LinkedIn:**  
+https://www.linkedin.com/in/ravi-thakur-0994502a2/
 
 ## License
 
